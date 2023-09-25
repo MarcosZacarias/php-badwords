@@ -6,7 +6,7 @@ $paragraph = $_GET["text_area"];
 
 $paragraph = trim($paragraph);
 
-$paragraph_censored = str_replace($censored_word,"***",$paragraph );
+$paragraph_censored = str_replace($censored_word,"*** ",$paragraph );
 
 ?>
 
@@ -35,6 +35,10 @@ $paragraph_censored = str_replace($censored_word,"***",$paragraph );
       </p>
       <p>
         <?php echo($paragraph_censored);?>
+        <span>
+          Lunghezza:
+          <?php echo strlen($paragraph_censored);?> caratteri
+        </span>
       </p>
       
     </div>
